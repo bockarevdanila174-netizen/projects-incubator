@@ -71,7 +71,6 @@ body {
   width: 152px;
   height: 50px;
   background-color: #0a61f7;
-  font-family: var(--font-family);
   font-weight: 500;
   font-size: 14px;
   text-decoration: none;
@@ -80,6 +79,12 @@ body {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
+  box-shadow:0 0 4px rgba(0,0,0,0.5);
+  transition: .3s box-shadow;
+  cursor: pointer;
+}
+.button:hover{
+box-shadow: 0 4px 10px rgba(10, 97, 247, 0.3);
 }
 
 .section__table {
@@ -147,6 +152,13 @@ body {
   text-align: center;
   color: #0a61f7;
   background-color: #fff;
+  transition: .3s box-shadow;
+  cursor: pointer;
+}
+.btn:hover{
+  border: 1.5px solid #95a1bb;
+   box-shadow:0 0 2px rgba(70, 66, 66, 0.4);
+
 }
 .btn.selected {
   background-color: #0a61f7;
@@ -296,8 +308,6 @@ legend {
   flex-wrap: wrap;
   padding-top: 20px;
   justify-content: space-around;
- 
-
 }
 .checkbox input{
     color: #95a1bb;
@@ -328,9 +338,13 @@ font-size: 14px;
 text-transform: uppercase;
 text-align: center;
 color: #fff;
-
+transition: .3s box-shadow;
+  cursor: pointer;
 }
-
+.button-textarea:hover{
+  border: .5px solid #95a1bb;
+   box-shadow:0 0 2px rgba(70, 66, 66, 0.4);
+}
 .footer > span {
   display: block;
   height: 62px;
