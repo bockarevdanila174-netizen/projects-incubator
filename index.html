@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,85 +14,98 @@
   </head>
   <body>
     <header class="header">
-      <img class="logo" src="assets/img/Logo.svg" alt="logo" />
-      <nav class="nav">
-        <ul>
-          <li class="link">
-            <a href="#">Main</a>
-          </li>
-          <li class="link">
-            <a href="#">Rates</a>
-          </li>
-          <li class="link">
-            <a href="#">create account</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="container">
+        <div class="header-wrapper">
+          <a href="" class="logo">
+            <img class="logo-img" src="assets/img/Logo.svg" alt="img" />
+          </a>
+          <nav class="nav">
+            <ul class="menu">
+              <li class="menu-item">
+                <a href="#" class="menu-link">Main</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu-link">Rates</a>
+              </li>
+              <li class="menu-item">
+                <a href="#" class="menu-link">create account</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
 
-    <section class="section__header">
-      <div class="content">
-        <h1 class="title-header">Markup achievement</h1>
-        <p class="description-header">
-          The harder you work for something, the greater you’ll feel when you
-          achieve it.
-        </p>
-        <a class="button" href="#">Learn More</a>
+    <section class="main">
+      <div class="container">
+        <div class="main-wrapper"> 
+          <div class="main-info">
+            <h1 class="main-title">Markup achievement</h1>
+            <p class="main-description">
+              The harder you work for something, the greater you’ll feel when
+              you achieve it.
+            </p>
+            <button class="button">Learn More</button>
+          </div>
+          <img class="main-img" src="assets/img/image.png" alt="img" />
+        </div>
       </div>
-      <img src="assets/img/image.png" alt="" />
     </section>
 
-    <section class="section__table">
-      <form>
-        <h2 class="title-table">Rates</h2>
+    <section class="rates-section">
+      <div class="container">
+        <div class="rates-wrapper">
+        <h2 class="title">Rates</h2>
         <p class="description-table">
           Failure will never overtake me if my determination to succeed is
           strong enough.
         </p>
         <table class="table">
           <thead>
-            <tr class="table-item">
-              <th>Features</th>
-              <th>Standart</th>
-              <th>Plus</th>
-              <th>PRO</th>
+            <tr>
+              <th class="table-subtitle gray">Features</th>
+              <th class="table-title">Standart</th>
+              <th class="table-title">Plus</th>
+              <th class="table-title">PRO</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Theory</td>
+              <td class="table-subtitle">Theory</td>
               <td><img src="assets/img/yes.svg" alt="" /></td>
               <td><img src="assets/img/yes.svg" alt="" /></td>
               <td><img src="assets/img/yes.svg" alt="" /></td>
             </tr>
             <tr>
-              <td>Practice</td>
+              <th class="table-subtitle">Practice</th>
               <td><img src="assets/img/no.svg" alt="svg" /></td>
               <td><img src="assets/img/yes.svg" alt="svg" /></td>
               <td><img src="assets/img/yes.svg" alt="svg" /></td>
             </tr>
             <tr>
-              <td>Code review</td>
+              <th class="table-subtitle">Code review</th>
               <td><img src="assets/img/no.svg" alt="" /></td>
               <td><img src="assets/img/no.svg" alt="" /></td>
-
               <td><img src="assets/img/yes.svg" alt="" /></td>
             </tr>
           </tbody>
           <tfoot class="table-footer">
             <tr>
-              <td class="link">Have questions?</td>
+              <th class="table-subtitle"> <a href="" class="table-link">Have questions?</a></th>
               <td><button class="btn">get now</button></td>
-              <td><button class="btn selected">get now</button></td>
+              <td><button class="btn active">get now</button></td>
               <td><button class="btn">get now</button></td>
             </tr>
           </tfoot>
         </table>
-      </form>
+        </div>
+      </div>
     </section>
 
     <section class="section__about">
-      <div class="content-about">
+      <div class="container">
+        <div class="wrapper-about">
+          <div class="info-about">
         <h3 class="title-about">Create your free account</h3>
         <p class="description-about">
           Let us first talk about dreams. We all know that dreams do play a role
@@ -102,25 +115,17 @@
           can be who or what we want to be, regardless of the fact that in real
           life.
         </p>
-        <div class="image-about">
-          <div>
-            <img src="assets/img/yes.svg" alt="" />
-            <span>Easy setup, fast start</span>
-          </div>
-          <div>
-            <img src="assets/img/yes.svg" alt="" />
-            <span>Free forever for core features</span>
-          </div>
-          <div>
-            <img src="assets/img/yes.svg" alt="" />
-            <span>14-day trial of premium features</span>
-          </div>
+        <ul class="list-about">
+          <li class="list-item">Easy setup, fast start</li>
+          <li class="list-item">Free forever for core features</li>
+          <li class="list-item">14-day trial of premium features</li>
+        </ul>
         </div>
-      </div>
+        
 
       <form class="form-about">
         <div class="form">
-          <div>
+          
             <input
               name="userName"
               type="text"
@@ -128,9 +133,7 @@
               class="name"
               placeholder="Full Name*"
             />
-          </div>
-          <div>
-           
+          
             <input
               name="userEmail"
               type="email"
@@ -138,21 +141,17 @@
               class="email"
               placeholder="Email*"
             />
-          </div>
-          <div>
           
             <input
               name="userPassword"
               type="password"
               id="userPassword"
               class="password"
-              placeholder="Password*"/>
-          </div>
-          <div>
-            
+              placeholder="Password*"
+            />
+          
             <input name="userBirth" type="date" class="date" id="userBirth" />
-          </div>
-           
+          
 
           <select name="country" id="country" class="country">
             <option value="USA">Washington</option>
@@ -160,78 +159,60 @@
             <option value="Italy">Rome</option>
           </select>
         </div>
-         
-       
+
         <div class="radio">
           <label>
-            <input 
-            type="radio" 
-            name="developer" 
-            value="frontend" 
-            checked />
+            <input type="radio" name="developer" value="frontend" checked />
             Frontend
           </label>
 
           <label>
-            <input 
-            type="radio" 
-            name="developer" 
-            value="backend" />
+            <input type="radio" name="developer" value="backend" />
             Backend
           </label>
         </div>
 
-        
-          <fieldset class="fieldset">
-            <legend>Favorite Technologies</legend>
-            <div class="checkbox">
+        <fieldset class="fieldset">
+          <legend>Favorite Technologies</legend>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="html" name="technologies" />
+              HTML
+            </label>
 
-              <label>
-                <input 
-                type="checkbox" 
-                value="html" 
-                name="technologies">
-                HTML
-              </label>
+            <label>
+              <input type="checkbox" value="css" name="technologies" checked />
+              CSS
+            </label>
 
-              <label>
-                <input 
-                type="checkbox" 
-                value="css" 
-                name="technologies" 
-                checked >
-                CSS
-              </label>
+            <label>
+              <input type="checkbox" value="react" name="technologies" />
+              React
+            </label>
 
-              <label>
-                <input 
-                type="checkbox" 
-                value="react" 
-                name="technologies">
-                React
-              </label>
-
-              <label>
-                <input
-                  type="checkbox"
-                  value="styled components"
-                  name="technologies"
-                />
-                Styled components
-              </label>
-            </div>
-          </fieldset>
-          <div >
-            <textarea
-              placeholder="Something else about you..."
-              name="about"
-              id="about"
-              class="textarea"
-            ></textarea>
+            <label>
+              <input
+                type="checkbox"
+                value="styled components"
+                name="technologies"
+              />
+              Styled components
+            </label>
           </div>
-       
-        <input type="submit" value="registration" class="button-textarea">
+        </fieldset>
+        <div>
+          <textarea
+            placeholder="Something else about you..."
+            name="about"
+            id="about"
+            class="textarea"
+          ></textarea>
+        </div>
+
+        <input type="submit" value="registration" class="button-textarea" />
       </form>
+      </div>
+      </div>
     </section>
 
     <footer class="footer">
