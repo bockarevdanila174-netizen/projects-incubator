@@ -6,6 +6,7 @@
 
 body {
   font-family: "Rubik", sans-serif;
+  min-width: 375px;
 }
 
 .container{
@@ -47,7 +48,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 800px;
+  min-height: 800px;
 }
 
 
@@ -203,6 +204,7 @@ background-color: #0a61f7;
 }
 .info-about{
   max-width: 500px;
+  /* padding-right: 160px; */
 }
 
 
@@ -338,3 +340,50 @@ transition: .3s box-shadow;
   line-height: 62px;
   color: #fff;
 }
+
+  @media screen and (max-width:1180px){
+.main-wrapper{
+  flex-direction: column;
+  align-items: start;
+  /* margin-top: 100px;  */
+}
+.main-img{
+  align-self: center;
+}
+.main-info{
+  margin: 100px 0 80px;
+}
+.rates-section{
+  width: 100%;
+}
+.table{
+ 
+  width:940px;
+}
+.table-wrapper{
+  overflow-x: auto;
+  width: 100%;
+  max-width: 940px;
+}
+
+.wrapper-about{
+  
+  flex-direction: column;
+}
+
+
+.form-about{
+  align-self: center;
+}
+.info-about{
+  max-width: unset;
+  margin-bottom: 70px;
+}
+
+}
+
+
+
+    
+  
+
