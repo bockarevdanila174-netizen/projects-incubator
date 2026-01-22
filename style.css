@@ -24,11 +24,20 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
+.nav{
+  display: flex;
+  justify-content: end;
+
+}
+
 .menu{
   display: flex;
+  align-items: center;
   list-style: none;
   gap: 24px;
 }
+
 
 
 .menu-item a {
@@ -38,6 +47,9 @@ body {
   text-transform: uppercase;
   color: #fff;
   list-style: none;
+}
+.menu-icon{
+  display: none;
 }
 
 
@@ -89,7 +101,10 @@ box-shadow: 0 4px 10px rgba(10, 97, 247, 0.3);
 }
 
 .main-img{
-  align-self:flex-end;
+  
+  max-width: 650px;
+  width: 100%;
+  height: auto;
 }
 
 .rates-section{
@@ -180,73 +195,61 @@ background-color: #0a61f7;
   background-color: #0a61f7;
   color: #fff;
 }
+
+
 .section__about {
-  padding: 100px 0;
+  padding: 60px 0;
   
-}
-.list-about{
-  padding: 0 0 0 20px;
-}
-
-
-.list-item{
-  list-style-image: url(assets/img/yes.svg);
-  margin-bottom: 30px;
-  margin-bottom: 15px;
-  color: #363940;
 }
 
 
 .wrapper-about{
   display: flex;
   justify-content: space-between;
+  gap: 60px;
+  align-items: flex-start;
   
 }
 .info-about{
   max-width: 500px;
-  /* padding-right: 160px; */
+  
 }
-
 
 
 .title-about {
   font-weight: 500;
   font-size: 32px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   color: #363940;
 }
 
 .description-about {
   margin-bottom: 40px;
-  
+  color: #363940;
 }
-.form {
+
+.list-item{
+  list-style-image: url(assets/img/yes.svg);
+  margin-bottom: 30px;
+  color: #363940;
+}
+.form-about {
+  flex: 1;
   display: flex;
-  flex-wrap: wrap; 
+  flex-direction: column;
   gap: 20px;
-  max-width: 480px; 
-  margin-bottom: 20px;
-}
-
-
-
-.name {
   width: 100%;
-  height: 50px;
-  border-radius: 4px;
-  border: 1px solid #95a1bb;
-  padding: 0 0 0 15px;
+  max-width: 480px;
 }
 
-.email,
-.password,
-.date,
-.country {
-  border: 1px solid #95a1bb;
-  border-radius: 4px;
-  width: 230px;
-  height: 50px;
-  padding: 0 0 0 15px;
+
+
+
+
+input, select, fieldset, textarea {
+    border-radius: 4px;
+    border: 1px solid #95A1BB;
+    padding: 14px 15px;
 }
 
 
@@ -262,58 +265,79 @@ textarea::placeholder{
   font-weight: 400;
   font-size: 16px;
   color: #95a1bb;
-  border-radius: 4px;
+  line-height: 22.4px;
+  
+}
+input[type="text"] {
+    width: 100%;
+}
+
+select{
+  background: url(assets/img/Arrow-down.svg) no-repeat right 15px top 50%;
+  appearance: none;
 }
 
 input[type="email"],input[type="password"],input[type="date"],select{
-width: 230px;
+min-width: 230px;
+width: 100%;
 height: 50px;
+flex-grow: 1;
+
 }
 
 
-input[type="date"]::-webkit-calendar-picker-indicator{
-  background: url(assets/img/Calendar.svg) no-repeat; 
-}
 
 
-.radio, fieldset{
-  display: flex;
-  gap: 15px;
-  margin-bottom: 20px;
-}
 
+
+.radio,
 fieldset {
-  width: 100%;
-  padding:20px 15px;
-  margin-bottom: 20px;
-  border: 1px solid #95a1bb;
-
-  
+  display: flex;
+  column-gap: 30px;
 }
+.fieldset-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.radio {
+  display: flex;
+  gap: 30px;
+}
+
+.tech-fieldset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  padding: 30px 15px;
+}
+
 legend {
   margin-left: 40px;
   padding: 0 8px;
 }
 
 
-.checkbox input{
-    color: #95a1bb;
-}
+
 
 .textarea {
-width: 480px;
-height: 80px;
-
-padding: 14px 0 0 15px;
+  width: 100%;
+min-height: 80px;
 resize: none;
-margin-bottom: 20px;
 
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+  background: url(assets/img/Calendar.svg) no-repeat; 
 }
 
 .button-textarea {
 border-radius: 4px;
 border: 1px solid #0a61f7;
-width: 480px;
+max-width: 480px;
+width: 100%;
 height: 51px;
 background-color: #0a61f7;
 font-weight: 500;
@@ -341,11 +365,11 @@ transition: .3s box-shadow;
   color: #fff;
 }
 
-  @media screen and (max-width:1180px){
+  @media screen and (max-width:1080px){
 .main-wrapper{
   flex-direction: column;
   align-items: start;
-  /* margin-top: 100px;  */
+  
 }
 .main-img{
   align-self: center;
@@ -353,9 +377,7 @@ transition: .3s box-shadow;
 .main-info{
   margin: 100px 0 80px;
 }
-.rates-section{
-  width: 100%;
-}
+
 .table{
  
   width:940px;
@@ -369,6 +391,7 @@ transition: .3s box-shadow;
 .wrapper-about{
   
   flex-direction: column;
+  gap: 70px;
 }
 
 
@@ -380,10 +403,35 @@ transition: .3s box-shadow;
   margin-bottom: 70px;
 }
 
+
+}
+ @media screen and (max-width:576px){
+.menu{
+display: none;
+
+ }
+ .menu-icon{
+  display: block;
+  
 }
 
+ .main-title{
+font-size: 52px;
+line-height: 60px;
+}
 
+.main-img{
+  align-self: flex-end;
+  max-width: 656px;
+  width: 100%;
+}
 
-    
-  
+label{
+  white-space: nowrap;
+}
+fieldset {
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
 
+}
