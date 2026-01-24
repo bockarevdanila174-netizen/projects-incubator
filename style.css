@@ -30,6 +30,9 @@ body {
   justify-content: end;
 
 }
+.menu-toggle {
+  display: none;
+}
 
 .menu{
   display: flex;
@@ -81,6 +84,7 @@ body {
 
 
 .button {
+  display: inline-block;
   width: 152px;
   height: 50px;
   background-color: #0a61f7;
@@ -88,16 +92,18 @@ body {
   font-size: 14px;
   text-decoration: none;
   border-radius: 5px;
-  padding: 15px 24px;
+  /* padding: 15px 24px; */
   text-transform: uppercase;
   text-align: center;
+  border: none;
+  transition: .3s, transform 0.3s, box-shadow 0.3s;
   color: #fff;
   box-shadow:0 0 4px rgba(0,0,0,0.5);
-  transition: .3s box-shadow;
   cursor: pointer;
 }
 .button:hover{
 box-shadow: 0 4px 10px rgba(10, 97, 247, 0.3);
+transform: scale(1.03);
 }
 
 .main-img{
@@ -226,6 +232,10 @@ background-color: #0a61f7;
 .description-about {
   margin-bottom: 40px;
   color: #363940;
+}
+
+.list-about{
+  padding-left: 20px;
 }
 
 .list-item{
@@ -406,14 +416,77 @@ transition: .3s box-shadow;
 
 }
  @media screen and (max-width:576px){
-.menu{
-display: none;
 
- }
- .menu-icon{
+ .menu-icon-wrapper{
   display: block;
+  /* display: flex; 
+  align-items: center; */
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  box-shadow: 10px 5px 10px  rgba(0,0,0,0.4);
+  cursor: pointer;
+  z-index: 1; 
+  box-shadow: none; 
+  background: transparent;
   
+
 }
+
+
+.menu{
+  /* display: block; */
+  position: fixed;
+  /* visibility: hidden; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: -100%;
+  width: 150px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  text-align: center;
+  background-color: #838a8e78;
+  transition: left 0.4s ease;
+  /* box-shadow: 1px 0px 6px rgba(0, 0, 0, .2); */
+
+}
+.menu-item {
+    display: block;
+    padding: 10px;
+    
+  }
+  .menu-icon {
+    display: block;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, .7));
+    /* width: 26px; */
+    /* height: auto; */
+  }
+
+.menu-item:hover .menu-link{ 
+color: #5e6f76a9;
+}
+
+.menu-icon-wrapper:hover .menu-icon {
+  
+  filter: brightness(0.5) sepia(1) hue-rotate(140deg) saturate(0.5);
+  opacity: .8; 
+}
+.menu-toggle:checked ~ .menu {
+    right: 0;
+  }
+  .menu-link {
+    display: block;
+    text-decoration: none;
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+
 
  .main-title{
 font-size: 52px;
